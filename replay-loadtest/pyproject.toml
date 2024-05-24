@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "replay_loadtest"
+version = "0.1.0"
+description = ""
+authors = ["Frederik Baetens <fbaetens@cloudflare.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+locust = "^2.28.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
