@@ -53,7 +53,7 @@ async function checkReportID(reportID: string, stub: DurableObjectStub<ReplayDO>
 }
 
 function getStubForReportID(reportID: string, env: Env): DurableObjectStub<ReplayDO> {
-	let id: DurableObjectId = env.REPLAY_DO.idFromName("test_4", reportID.slice(0, env.SHARDING_LENGTH));
+	let id: DurableObjectId = env.REPLAY_DO.idFromName("test10" + reportID.slice(0, env.SHARDING_LENGTH));
 
 	let locationHint = getLocationHint();
 
