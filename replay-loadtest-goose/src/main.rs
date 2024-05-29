@@ -29,10 +29,10 @@ async fn loadtest_replay(user: &mut GooseUser) -> TransactionResult {
 
     match goose.response {
         Ok(response) => {
-            let headers = response.headers().clone();
-            let response_text = response.text().await.unwrap_or("NO BODY".to_string());
+            //let headers = response.headers().clone();
+            //let response_text = response.text().await.unwrap_or("NO BODY".to_string());
 
-            user.log_debug("response", Some(&goose.request), Some(&headers), Some(&response_text))?;
+            //user.log_debug("response", Some(&goose.request), Some(&headers), Some(&response_text))?;
         },
         Err(e) => user.log_debug(&format!("error loading /: {}", e), Some(&goose.request), None, None)?,
     };
